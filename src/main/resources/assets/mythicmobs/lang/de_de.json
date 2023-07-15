@@ -25,12 +25,44 @@
   "item.mythicmobs.drake_spawn_egg": "Drake Spawn Ei",
   "item.mythicmobs.mushroom_spawn_egg": "Sporenling Spawn Ei",
   "item.mythicmobs.automaton_head": "Automat Kopf",
-
+  "item.mythicmobs.chupacabra_raw_meat": "Rohes Chupacabra Fleisch",
+  "item.mythicmobs.chupacabra_cooked_meat_skewer": "Chupacabra Spies",
+  "item.mythicmobs.gear": "Automaton Ausrüstung",
+  
   "block.mythicmobs.bronze_block": "Bronze Block",
   "block.mythicmobs.bronze_block_cut": "Geschnittener Bronze block",
 
   "itemGroup.mythicmobs.item_group": "Mythic Mobs",
 
   "mythicmobs.midnightconfig.title": "Mythic Mobs Optionen",
+
+  "mythicmobs.midnightconfig.mobSpawnRates": "Mob Spawn Raten",
+  "mythicmobs.midnightconfig.koboldSpawnWeight": "Kobold Spawn Gewicht",
+  "mythicmobs.midnightconfig.koboldWarriorSpawnWeight": "Kobold Krieger Spawn Gewicht",
+  "mythicmobs.midnightconfig.chupacabraSpawnWeight": "Chupacabra Spawn Gewicht",
+  "mythicmobs.midnightconfig.drakeSpawnWeight": "Drake Spawn Gewicht",
+  "mythicmobs.midnightconfig.mushroomSpawnWeight": "Sporenling Spawn Gewicht",
+
+  "mythicmobs.midnightconfig.mobAttributes": "Mob Attribute",
+  "mythicmobs.midnightconfig.automatonHealth": "Automat Leben",
+  "mythicmobs.midnightconfig.automatonAttackDamage": "Automat Angriffsschaden",
+  "mythicmobs.midnightconfig.chupacabraHealth": "Chupacabra Leben",
+  "mythicmobs.midnightconfig.chupacabraAttackDamage": "Chupacabra Angriffsschaden",
+  "mythicmobs.midnightconfig.drakeHealth": "Drake Leben",
+  "mythicmobs.midnightconfig.drakeAttackDamage": "Drake Angriffsschaden",
+  "mythicmobs.midnightconfig.koboldHealth": "Kobold Leben",
+  "mythicmobs.midnightconfig.koboldAttackDamage": "Kobold Angriffsschaden",
+  "mythicmobs.midnightconfig.koboldWarriorHealth": "Kobold Krieger Leben",
+  "mythicmobs.midnightconfig.koboldWarriorArmor": "Kobold Krieger Rüstung",
+  "mythicmobs.midnightconfig.koboldWarriorAttackDamage": "Kobold Krieger Angriffsschaden",
+  "mythicmobs.midnightconfig.mushroomHealth": "Sporenling Leben",
+  "mythicmobs.midnightconfig.wendigoHealth": "Wendigo Leben",
+  "mythicmobs.midnightconfig.wendigoArmor": "Wendigo Rüstung",
+  "mythicmobs.midnightconfig.wendigoAttackDamage": "Wendigo Angriffsschaden",
+
+
+  "mythicmobs.midnightconfig.miscellaneous": "Sonstig",
   "mythicmobs.midnightconfig.REPLACE_IRON_GOLEMS": "Eisen Golems Ersetzen"
+  "mythicmobs.midnightconfig.redMushroomLines": "Roter Sporenling Linien",
+  "mythicmobs.midnightconfig.brownMushroomLines": "Brauner Sporenling Linien"
 }
