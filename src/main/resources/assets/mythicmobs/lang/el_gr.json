@@ -32,5 +32,34 @@
   "itemGroup.mythicmobs.item_group": "Mythic Mobs",
 
   "mythicmobs.midnightconfig.title": "Ρυθμίσεις Mythic Mobs",
-  "mythicmobs.midnightconfig.REPLACE_IRON_GOLEMS": "Αντικατάσταση των Iron Golem"
+
+  "mythicmobs.midnightconfig.mobSpawnRates": "Ρυθμός Γέννησης Τεράτων",
+  "mythicmobs.midnightconfig.koboldSpawnWeight": "Ρυθμός Γέννησης Καλικάντζαρου",
+  "mythicmobs.midnightconfig.koboldWarriorSpawnWeight": "Ρυθμός Γέννησης Καλικάντζαρου Πολεμιστή",
+  "mythicmobs.midnightconfig.chupacabraSpawnWeight": "Ρυθμός Γέννησης Τσουπακάμπρα",
+  "mythicmobs.midnightconfig.drakeSpawnWeight": "Ρυθμός Γέννησης Δράκου",
+  "mythicmobs.midnightconfig.mushroomSpawnWeight": "Ρυθμός Γέννησης Σπορίδιου",
+
+  "mythicmobs.midnightconfig.mobAttributes": "Ρυθμίσεις Τεράτων",
+  "mythicmobs.midnightconfig.automatonHealth": "Ζωή Αυτόματου",
+  "mythicmobs.midnightconfig.automatonAttackDamage": "Δύναμη Αυτόματου",
+  "mythicmobs.midnightconfig.chupacabraHealth": "Ζωή Τσουπακάμπρα",
+  "mythicmobs.midnightconfig.chupacabraAttackDamage": "Δύναμη Τσουπακάμπρα",
+  "mythicmobs.midnightconfig.drakeHealth": "Ζωή Δράκου",
+  "mythicmobs.midnightconfig.drakeAttackDamage": "Δύναμη Δράκου",
+  "mythicmobs.midnightconfig.koboldHealth": "Ζωή Καλικάντζαρου",
+  "mythicmobs.midnightconfig.koboldAttackDamage": "Δύναμη Καλικάντζαρου",
+  "mythicmobs.midnightconfig.koboldWarriorHealth": "Ζωή Καλικάντζαρου Πολεμιστή",
+  "mythicmobs.midnightconfig.koboldWarriorArmor": "Αντίσταση Καλικάντζαρου Πολεμιστή",
+  "mythicmobs.midnightconfig.koboldWarriorAttackDamage": "Δύναμη Καλικάντζαρου Πολεμιστή",
+  "mythicmobs.midnightconfig.mushroomHealth": "Ζωή Σπορίδιου",
+  "mythicmobs.midnightconfig.wendigoHealth": "Ζωή Γουέντιγκο",
+  "mythicmobs.midnightconfig.wendigoArmor": "Αντίσταση Γουέντιγκο",
+  "mythicmobs.midnightconfig.wendigoAttackDamage": "Δύναμη Γουέντιγκο",
+
+
+  "mythicmobs.midnightconfig.miscellaneous": "Διάφορα",
+  "mythicmobs.midnightconfig.replaceIronGolems": "Αντικατάσταση Iron Golems",
+  "mythicmobs.midnightconfig.redMushroomLines": "Λόγια Κόκκινου Σπορίδιου",
+  "mythicmobs.midnightconfig.brownMushroomLines": "Λόγια Καφέ Σπορίδιου"
 }
