@@ -29,6 +29,12 @@ body:
     -   type: input
         attributes:
             label: "Mod version"
-            description: "The mod pack version you were using. (e.g. 1.0)"
+            description: "The mod version you were using. (e.g. 1.0)"
+        validations:
+            required: true
+    -   type: input
+        attributes:
+            label: "Minecraft version"
+            description: "The Minecraft version you were using. (e.g. 1.20.1)"
         validations:
             required: true
