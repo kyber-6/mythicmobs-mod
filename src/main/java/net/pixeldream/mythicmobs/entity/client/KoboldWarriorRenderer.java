@@ -1,6 +1,7 @@
 package net.pixeldream.mythicmobs.entity.client;
 
 import com.google.common.collect.Maps;
+import mod.azure.azurelib.cache.object.GeoBone;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumer;
@@ -16,9 +17,6 @@ import net.minecraft.util.math.Vec3f;
 import net.pixeldream.mythicmobs.MythicMobs;
 import net.pixeldream.mythicmobs.entity.KoboldWarriorEntity;
 import net.pixeldream.mythicmobs.entity.KoboldWarriorVariant;
-import software.bernie.geckolib3.core.processor.IBone;
-import software.bernie.geckolib3.geo.render.built.GeoBone;
-import software.bernie.geckolib3.renderers.geo.ExtendedGeoEntityRenderer;
 
 import java.util.Map;
 

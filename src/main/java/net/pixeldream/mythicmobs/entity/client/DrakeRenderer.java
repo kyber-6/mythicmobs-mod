@@ -1,6 +1,7 @@
 package net.pixeldream.mythicmobs.entity.client;
 
 import com.google.common.collect.Maps;
+import mod.azure.azurelib.renderer.GeoEntityRenderer;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;
@@ -11,7 +12,6 @@ import net.minecraft.util.Util;
 import net.pixeldream.mythicmobs.MythicMobs;
 import net.pixeldream.mythicmobs.entity.DrakeEntity;
 import net.pixeldream.mythicmobs.entity.DrakeVariant;
-import software.bernie.geckolib3.renderers.geo.GeoEntityRenderer;
 
 import java.util.Map;
 

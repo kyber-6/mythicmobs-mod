@@ -1,12 +1,9 @@
 package net.pixeldream.mythicmobs.entity.client;
 
+import mod.azure.azurelib.model.data.EntityModelData;
 import net.minecraft.util.Identifier;
 import net.pixeldream.mythicmobs.MythicMobs;
 import net.pixeldream.mythicmobs.entity.KoboldWarriorEntity;
-import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
-import software.bernie.geckolib3.core.processor.IBone;
-import software.bernie.geckolib3.model.AnimatedGeoModel;
-import software.bernie.geckolib3.model.provider.data.EntityModelData;
 
 public class KoboldWarriorModel extends AnimatedGeoModel<KoboldWarriorEntity> {
     @Override

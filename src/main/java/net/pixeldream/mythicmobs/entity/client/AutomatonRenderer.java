@@ -1,5 +1,6 @@
 package net.pixeldream.mythicmobs.entity.client;
 
+import mod.azure.azurelib.renderer.GeoEntityRenderer;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;
@@ -8,7 +9,6 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 import net.pixeldream.mythicmobs.MythicMobs;
 import net.pixeldream.mythicmobs.entity.AutomatonEntity;
-import software.bernie.geckolib3.renderers.geo.GeoEntityRenderer;
 
 public class AutomatonRenderer extends GeoEntityRenderer<AutomatonEntity> {
     public AutomatonRenderer(EntityRendererFactory.Context ctx) {
