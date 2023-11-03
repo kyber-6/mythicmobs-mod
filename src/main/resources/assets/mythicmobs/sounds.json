@@ -15,5 +15,11 @@
     "sounds": [
       "mythicmobs:entity/drake/roar_big"
     ]
+  },
+  "robotic_voice": {
+    "subtitle": "subtitles.mythicmobs.robotic_voice",
+    "sounds": [
+      "mythicmobs:entity/automaton/robotic_voice"
+    ]
   }
 }

@@ -31,6 +31,7 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 import net.pixeldream.mythicmobs.config.MythicMobsConfigs;
 import net.pixeldream.mythicmobs.registry.ItemRegistry;
+import net.pixeldream.mythicmobs.registry.SoundRegistry;
 import net.pixeldream.mythicmobs.registry.TagRegistry;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.IAnimatable;
@@ -196,6 +197,7 @@ public class AutomatonEntity extends TameableEntity implements IAnimatable {
             MinecraftServer server = player.getServer();
             setSit(!isSitting());
             if (server != null) {
+                this.playSound(SoundRegistry.ROBOTIC_VOICE, 1.0f, 1.0f);
                 server.send(new ServerTask(0, () -> player.sendMessage(Text.literal(!isSitting() ? "I will follow you." : "I will wait for you."), true)));
             }
             return ActionResult.SUCCESS;
