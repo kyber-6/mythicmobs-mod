@@ -1,7 +1,6 @@
 package net.pixeldream.mythicmobs;
 
 import eu.midnightdust.lib.config.MidnightConfig;
-import mod.azure.azurelib.AzureLib;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;
@@ -12,6 +11,7 @@ import net.pixeldream.mythicmobs.registry.*;
 import net.pixeldream.mythicmobs.world.gen.WorldGen;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import software.bernie.geckolib3.GeckoLib;
 
 import static net.pixeldream.mythicmobs.registry.ItemRegistry.AUTOMATON_HEAD;
 
@@ -25,7 +25,7 @@ public class MythicMobs implements ModInitializer {
 	public void onInitialize() {
 		LOGGER.info("Hello from " + MOD_NAME + "!");
 
-		AzureLib.initialize();
+		GeckoLib.initialize();
 		MidnightConfig.init(MOD_ID, MythicMobsConfigs.class);
 
 		LOGGER.info("Registering entities for " + MOD_NAME);

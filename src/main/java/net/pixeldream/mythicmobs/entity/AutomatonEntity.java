@@ -18,17 +18,20 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.particle.ParticleEffect;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.ServerTask;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
-import net.pixeldream.mythicmobs.MythicMobs;
 import net.pixeldream.mythicmobs.config.MythicMobsConfigs;
 import net.pixeldream.mythicmobs.registry.ItemRegistry;
+import net.pixeldream.mythicmobs.registry.TagRegistry;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib3.core.IAnimatable;
 import software.bernie.geckolib3.core.PlayState;
@@ -106,6 +109,15 @@ public class AutomatonEntity extends TameableEntity implements IAnimatable {
     }
 
     @Override
+    public boolean damage(DamageSource source, float amount) {
+        boolean bl = super.damage(source, amount);
+        if (bl) {
+            this.playSound(SoundEvents.ENTITY_IRON_GOLEM_DAMAGE, 1.0f, 1.0f);
+        }
+        return bl;
+    }
+
+    @Override
     public void registerControllers(AnimationData animationData) {
         animationData.addAnimationController(new AnimationController(this, "controller", 2.5f, animationEvent -> {
             if (animationEvent.isMoving() && !handSwinging) {
@@ -155,21 +167,45 @@ public class AutomatonEntity extends TameableEntity implements IAnimatable {
     @Override
     public ActionResult interactMob(PlayerEntity player, Hand hand) {
         ItemStack itemStack = player.getStackInHand(hand);
-        if (!itemStack.isOf(ItemRegistry.BRONZE_INGOT)) {
+        if (hand == Hand.MAIN_HAND && !isTamed()) {
+            if (!this.getWorld().isClient()) {
+                super.setOwner(player);
+                this.navigation.recalculatePath();
+                this.setTarget(null);
+                this.getWorld().sendEntityStatus(this, (byte) 7);
+                setSit(false);
+                MinecraftServer server = player.getServer();
+                if (server != null) {
+                    server.send(new ServerTask(0, () -> player.sendMessage(Text.literal("I will protect you at all costs, " + player.getEntityName() + "."), true)));
+                }
+            }
+            return ActionResult.SUCCESS;
+        } else if (itemStack.getRegistryEntry().isIn(TagRegistry.Items.BRONZE_INGOTS)) {
+            float f = this.getHealth();
+            this.heal(25.0f);
+            if (this.getHealth() == f) {
+                return ActionResult.PASS;
+            }
+            float g = 1.0f + (this.random.nextFloat() - this.random.nextFloat()) * 0.2f;
+            this.playSound(SoundEvents.ENTITY_IRON_GOLEM_REPAIR, 1.0f, g);
+            if (!player.getAbilities().creativeMode) {
+                itemStack.decrement(1);
+            }
             return ActionResult.PASS;
+        } else if (isTamed() && !this.getWorld().isClient() && hand == Hand.MAIN_HAND) {
+            MinecraftServer server = player.getServer();
+            setSit(!isSitting());
+            if (server != null) {
+                server.send(new ServerTask(0, () -> player.sendMessage(Text.literal(!isSitting() ? "I will follow you." : "I will wait for you."), true)));
+            }
+            return ActionResult.SUCCESS;
         }
-        MythicMobs.LOGGER.info("HEALTH:" + this.getHealth());
-        float f = this.getHealth();
-        this.heal(25.0f);
-        if (this.getHealth() == f) {
-            return ActionResult.PASS;
-        }
-        float g = 1.0f + (this.random.nextFloat() - this.random.nextFloat()) * 0.2f;
-        this.playSound(SoundEvents.ENTITY_IRON_GOLEM_REPAIR, 1.0f, g);
-        if (!player.getAbilities().creativeMode) {
-            itemStack.decrement(1);
-        }
-        return ActionResult.success(this.world.isClient);
+        return ActionResult.success(this.getWorld().isClient);
+    }
+
+    public void setSit(boolean sitting) {
+        this.dataTracker.set(SITTING, sitting);
+        super.setSitting(sitting);
     }
 
     @Override
