@@ -13,7 +13,6 @@ import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Util;
-import net.minecraft.util.math.Vec3f;
 import net.pixeldream.mythicmobs.MythicMobs;
 import net.pixeldream.mythicmobs.entity.KoboldWarriorEntity;
 import net.pixeldream.mythicmobs.entity.KoboldWarriorVariant;
