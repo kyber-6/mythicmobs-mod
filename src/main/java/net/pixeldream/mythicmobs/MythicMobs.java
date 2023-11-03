@@ -8,7 +8,6 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.pixeldream.mythicmobs.config.MythicMobsConfigs;
-import net.pixeldream.mythicmobs.event.EntityEvents;
 import net.pixeldream.mythicmobs.registry.*;
 import net.pixeldream.mythicmobs.world.gen.WorldGen;
 import org.slf4j.Logger;
@@ -25,10 +24,10 @@ public class MythicMobs implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		LOGGER.info("Hello from " + MOD_NAME + "!");
-		LOGGER.info("Initializing GeckoLib for " + MOD_NAME);
+
 		AzureLib.initialize();
-		LOGGER.info("Initializing MidnightConfig for " + MOD_NAME);
 		MidnightConfig.init(MOD_ID, MythicMobsConfigs.class);
+
 		LOGGER.info("Registering entities for " + MOD_NAME);
 		new EntityRegistry();
 		LOGGER.info("Registering particles for " + MOD_NAME);
@@ -41,9 +40,6 @@ public class MythicMobs implements ModInitializer {
 		new BlockEntityRegistry();
 		LOGGER.info("Registering sounds for " + MOD_NAME);
 		new SoundRegistry();
-		LOGGER.info("Replacing Iron Golems with Automata from " + MOD_NAME);
-		EntityEvents.replaceNaturallySpawningIronGolemsWithAutomata();
-		EntityEvents.checkForUnSpawnedGolem();
 		LOGGER.info("Generating world-gen for " + MOD_NAME);
 		WorldGen.generateWorldGen();
 	}

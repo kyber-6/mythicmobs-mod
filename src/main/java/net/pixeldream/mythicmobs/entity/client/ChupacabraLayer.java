@@ -7,6 +7,8 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 import net.pixeldream.mythicmobs.MythicMobs;
 import net.pixeldream.mythicmobs.entity.ChupacabraEntity;
+import software.bernie.geckolib3.renderers.geo.GeoLayerRenderer;
+import software.bernie.geckolib3.renderers.geo.IGeoRenderer;
 
 public class ChupacabraLayer<T extends ChupacabraEntity> extends GeoLayerRenderer<T> {
     protected static final Identifier CHUPACABRA_EYES_TEXTURE = new Identifier(MythicMobs.MOD_ID, "textures/entity/chupacabra_eyes.png");

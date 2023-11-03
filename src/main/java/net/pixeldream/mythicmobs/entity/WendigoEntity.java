@@ -1,7 +1,5 @@
 package net.pixeldream.mythicmobs.entity;
 
-import mod.azure.azurelib.core.animation.AnimationController;
-import mod.azure.azurelib.core.object.PlayState;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityData;
@@ -33,6 +31,14 @@ import net.pixeldream.mythicmobs.config.MythicMobsConfigs;
 import net.pixeldream.mythicmobs.goal.DelayedAttackGoal;
 import net.pixeldream.mythicmobs.goal.RoarGoal;
 import org.jetbrains.annotations.Nullable;
+import software.bernie.geckolib3.core.IAnimatable;
+import software.bernie.geckolib3.core.PlayState;
+import software.bernie.geckolib3.core.builder.AnimationBuilder;
+import software.bernie.geckolib3.core.builder.ILoopType;
+import software.bernie.geckolib3.core.controller.AnimationController;
+import software.bernie.geckolib3.core.manager.AnimationData;
+import software.bernie.geckolib3.core.manager.AnimationFactory;
+import software.bernie.geckolib3.util.GeckoLibUtil;
 
 public class WendigoEntity extends BossEntity implements IAnimatable, Monster {
     private AnimationFactory factory = GeckoLibUtil.createFactory(this);
@@ -208,7 +214,7 @@ public class WendigoEntity extends BossEntity implements IAnimatable, Monster {
         ++deathTime;
         if (deathTime == 30) {
             produceParticles(ParticleTypes.POOF);
-            this.remove(Entity.RemovalReason.KILLED);
+            this.remove(RemovalReason.KILLED);
             this.dropXp();
         }
     }

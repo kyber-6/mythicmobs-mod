@@ -71,7 +71,7 @@ public class KoboldWarriorEntity extends AbstractKoboldEntity {
             if (random.nextInt(5) == 1) {
                 this.dropStack(new ItemStack(ItemRegistry.KOBOLD_SPEAR));
             }
-            this.remove(Entity.RemovalReason.KILLED);
+            this.remove(RemovalReason.KILLED);
             this.dropXp();
         }
     }

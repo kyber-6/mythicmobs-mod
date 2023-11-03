@@ -3,6 +3,7 @@ package net.pixeldream.mythicmobs.entity.client;
 import net.minecraft.util.Identifier;
 import net.pixeldream.mythicmobs.MythicMobs;
 import net.pixeldream.mythicmobs.entity.ChupacabraEntity;
+import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class ChupacabraModel extends AnimatedGeoModel<ChupacabraEntity> {
 

@@ -3,6 +3,7 @@ package net.pixeldream.mythicmobs.entity.client;
 import net.minecraft.util.Identifier;
 import net.pixeldream.mythicmobs.MythicMobs;
 import net.pixeldream.mythicmobs.entity.AutomatonEntity;
+import software.bernie.geckolib3.model.AnimatedGeoModel;
 
 public class AutomatonModel extends AnimatedGeoModel<AutomatonEntity> {
 

@@ -7,6 +7,8 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.Identifier;
 import net.pixeldream.mythicmobs.MythicMobs;
 import net.pixeldream.mythicmobs.entity.DrakeEntity;
+import software.bernie.geckolib3.renderers.geo.GeoLayerRenderer;
+import software.bernie.geckolib3.renderers.geo.IGeoRenderer;
 
 public class DrakeLayer<T extends DrakeEntity> extends GeoLayerRenderer<T> {
     protected final Identifier eyeTexture;

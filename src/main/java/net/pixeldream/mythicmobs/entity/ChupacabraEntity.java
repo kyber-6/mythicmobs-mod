@@ -1,7 +1,5 @@
 package net.pixeldream.mythicmobs.entity;
 
-import mod.azure.azurelib.core.animation.AnimationController;
-import mod.azure.azurelib.core.object.PlayState;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -24,6 +22,14 @@ import net.minecraft.world.World;
 import net.pixeldream.mythicmobs.config.MythicMobsConfigs;
 import net.pixeldream.mythicmobs.registry.ItemRegistry;
 import net.pixeldream.mythicmobs.registry.ParticleRegistry;
+import software.bernie.geckolib3.core.IAnimatable;
+import software.bernie.geckolib3.core.PlayState;
+import software.bernie.geckolib3.core.builder.AnimationBuilder;
+import software.bernie.geckolib3.core.builder.ILoopType;
+import software.bernie.geckolib3.core.controller.AnimationController;
+import software.bernie.geckolib3.core.manager.AnimationData;
+import software.bernie.geckolib3.core.manager.AnimationFactory;
+import software.bernie.geckolib3.util.GeckoLibUtil;
 
 import java.util.function.Predicate;
 
@@ -121,7 +127,7 @@ public class ChupacabraEntity extends HostileEntity implements IAnimatable, Mons
     public void updatePostDeath() {
         ++deathTime;
         if (deathTime == 15) {
-            this.remove(Entity.RemovalReason.KILLED);
+            this.remove(RemovalReason.KILLED);
             this.dropXp();
             this.dropStack(new ItemStack(ItemRegistry.CHUPACABRA_RAW_MEAT, random.nextInt(2)));
         }

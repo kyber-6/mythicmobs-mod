@@ -54,8 +54,6 @@ public class MythicMobsConfigs extends MidnightConfig {
     @MidnightConfig.Comment(centered = true)
     public static Comment miscellaneous;
     @MidnightConfig.Entry
-    public static boolean replaceIronGolems = false;
-    @MidnightConfig.Entry
     public static List<String> redMushroomLines = Arrays.asList(
             "playerGreeting",
             "Seen any smurfs lately?",
