@@ -32,6 +32,7 @@
 		"java": ">=17",
 		"geckolib3": ">=3.1.40",
 		"patchouli": ">=1.19.2-77-FABRIC",
+		"midnightlib": ">=1.0.0-fabric",
 		"fabric-api": "*"
 	},
 	"suggests": {
