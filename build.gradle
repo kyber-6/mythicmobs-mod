@@ -1,6 +1,7 @@
 plugins {
 	id 'fabric-loom' version '1.1-SNAPSHOT'
 	id 'maven-publish'
+	id "me.modmuss50.mod-publish-plugin" version "0.4.2"
 }
 
 sourceCompatibility = JavaVersion.VERSION_17
@@ -73,3 +74,54 @@ publishing {
 		// retrieving dependencies.
 	}
 }
+
+//publishMods {
+//	changelog = "# Mythic Mobs\n" +
+//			"\n" +
+//			"## [1.4.5] - X-08-2023\n" +
+//			"\n" +
+//			"### Added\n" +
+//			"\n" +
+//			"- Russian translation (many thanks to Heimdallr-1).\n" +
+//			"- Tag support for bronze\n" +
+//			"\n" +
+//			"### Changed\n" +
+//			"\n" +
+//			"- Mod icon\n" +
+//			"- Method in which automatons spawn (can now only be created like iron golems)\n" +
+//			"- Changed Automaton patchouli entry\n" +
+//			"\n" +
+//			"[![Bisect Hosting](https://www.bisecthosting.com/images/CF/MythicMobs/BH_MM_PROMO.webp)](https://bisecthosting.com/PixelDream)"
+//	type = STABLE
+//	file = remapJar.archiveFile
+//	modLoaders.add("fabric")
+//
+//	curseforge {
+//		accessToken = providers.environmentVariable(dotenvProperties.getProperty("CURSEFORGE_TOKEN"))
+//		projectId = "699989"
+//		minecraftVersions.add("1.20.1")
+//		requires {
+//			slug = "geckolib"
+//			slug = "patchouli-fabric"
+//		}
+//		optional {
+//			slug = "better-combat-by-daedelus"
+//		}
+//	}
+//
+//	modrinth {
+//		accessToken = providers.environmentVariable(dotenvProperties.getProperty("MODRINTH_TOKEN"))
+//		projectId = "avrKhvsK"
+//		minecraftVersions.add("1.20.1")
+//		requires {
+//			id = "8BmcQJ2H"
+//			slug = "geckolib"
+//			id = "nU0bVIaL"
+//			slug = "patchouli"
+//		}
+//		optional {
+//			id = "5sy6g3kz"
+//			slug = "better-combat"
+//		}
+//	}
+//}
